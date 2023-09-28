@@ -1,0 +1,50 @@
+@HOST=http://localhost:4004
+@PATH=/odata/v4/catalog-service-disquera/
+
+### ? GET Grabaciones
+GET {{HOST}}{{PATH}}Grabaciones
+Content-Type: application/json
+
+### ? GET Sesiones
+GET {{HOST}}{{PATH}}Sesiones
+Content-Type: application/json
+
+### ? GET Musicos
+GET {{HOST}}{{PATH}}Musicos
+
+### ? POST Grabaciones
+POST {{HOST}}{{PATH}}Sesiones
+Content-Type: application/json
+
+{
+    "horasGrabacion":5,
+    "disco_ID":"31b9fc9a-764b-4266-9592-41a46de7d488"
+}
+
+### ? POST Musico
+POST {{HOST}}{{PATH}}Musicos
+Content-Type: application/json
+
+{
+    "nombre_nombre":"Gabriel",
+    "apellido":"Sosa",
+    "alias":"El niño compu",
+    "horasGrabacion_ID":"df5f681b-f224-41a0-91bf-bd8af6edca2c"
+
+}
+
+### ? DELETE Musico
+POST {{HOST}}{{PATH}}deleteMusicos
+Content-Type: application/json
+
+{
+    "ID":["4a0f4e50-9314-49da-a0b2-1ce698bd6249","e085c00f-0c04-4c4e-baf7-096cc3627885"]
+}
+
+### ? GET Musico
+@ID=b7fb9d30-9a21-456b-92e4-55577cda2047
+GET {{HOST}}{{PATH}}getMusico(ID={{ID}})
+
+
+
+
